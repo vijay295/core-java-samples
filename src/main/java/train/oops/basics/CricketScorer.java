@@ -1,5 +1,7 @@
 package train.oops.basics;
 
+import java.util.Map;
+
 public class CricketScorer {
 	// Instance Variables - constitute the state of an object
 	private int score;
@@ -14,9 +16,26 @@ public class CricketScorer {
 	public void six() {
 		score = score + 6;
 	}
+	
+	public void six(int add) {
+		score = score + add;
+	}
+	
+	public void six(String add) {
+		//score = score + add;
+	}
+
 
 	public int getScore() {
 		return score;
+	}
+	
+	public CricketScorer() {
+		
+	}
+	
+	public CricketScorer(int score) {
+		this.score = score;
 	}
 
 	public static void main(String[] args) {
@@ -26,5 +45,10 @@ public class CricketScorer {
 		scorer.four();
 		// State of scorer is (score => 10)
 		System.out.println(scorer.getScore());
+		
+		CricketScorer scorer2 = new CricketScorer(20);
+		scorer2.six();
+		System.out.println(scorer2.getScore());
+		
 	}
 }
