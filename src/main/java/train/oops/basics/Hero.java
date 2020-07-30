@@ -1,6 +1,12 @@
 package train.oops.basics;
 
-class Actor {
+class Movie {
+	public void release() {
+		
+	}
+}
+
+class Actor extends Movie {
 	
 	private String name;
 	
@@ -14,7 +20,7 @@ class Actor {
 		this.name = name;
 	}
 	
-	public void setAction(String action) {
+	protected void setAction(String action) {
 		this.action = action;
 	}
 		
@@ -31,17 +37,26 @@ class Actor {
 }
 
 class Comedian extends Actor {
+		
 
 	@Override
-	public String toString() {
-		return "Comedian [name=" + getName() + ", action=" + getAction() + "]";
+	public void setAction(String action) {
+		//this.getAction();
+		super.setAction(action);
+		System.out.println("***********Inside Comedian");
 	}
+
+	@Override
+	public String getAction() {
+		return super.getAction();
+	}
+
 	
 	
 	
 }
 
-public class Hero extends Actor{
+public class Hero extends Actor {
 	
 	@Override
 	public String toString() {
@@ -53,11 +68,12 @@ public class Hero extends Actor{
 		Actor hero = new Hero();
 		hero.setName("power star");
 		hero.setAction("Fight");
+		hero.release();
 		System.out.println(hero);//power star
 		
 		Actor comedian = new Comedian();
-		comedian.setName("Comedian");
-		comedian.setAction("Laugh");
+		comedian.setName("asdfafasdfasdf");// its printing the sysout..
+		comedian.setAction("asdfasdfasdfasd");
 		System.out.println(comedian); // Comedian
 	}
 }

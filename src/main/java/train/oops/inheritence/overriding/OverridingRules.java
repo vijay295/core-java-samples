@@ -28,5 +28,7 @@ class SubClass {
 	public void protectedMethod() {
 
 	}
+	
+
 
 }

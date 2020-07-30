@@ -1,15 +1,22 @@
 package train.oops.inheritence;
 
-abstract class Animal {
-	String name;
+class Animal {
+	protected String name;
 
 	// cool functionality
-	abstract String bark();
+	String bark() {
+		System.out.println("bark");
+		return name;
+	}
 }
 
 class Dog extends Animal {
+	
+	public void setName(String name) {
+		this.name = name;
+	}
 	String bark() {
-		return "Bow Bow";
+		return name;		
 	}
 }
 
@@ -20,8 +27,10 @@ class Cat extends Animal {
 }
 
 public class InheritanceExamples {
+	String name;
 	public static void main(String[] args) {
 		Animal animal = new Dog();
+		
 		System.out.println(animal.bark());
 	}
 }

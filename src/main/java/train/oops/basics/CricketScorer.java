@@ -1,7 +1,5 @@
 package train.oops.basics;
 
-import java.util.Map;
-
 public class CricketScorer {
 	// Instance Variables - constitute the state of an object
 	private int score;
