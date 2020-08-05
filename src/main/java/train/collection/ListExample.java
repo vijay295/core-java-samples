@@ -11,6 +11,8 @@ public class ListExample {
 		List<String> list = new ArrayList<>();
 		list.add("Vijay");
 		list.add("Kumar");
+		list.add("Kumar");
+		System.out.println(list);
 		System.out.println("By Index");
 		System.out.println(list.get(0));
 		System.out.println(list.get(1));
