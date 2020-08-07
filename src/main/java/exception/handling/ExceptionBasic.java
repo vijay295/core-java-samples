@@ -32,6 +32,14 @@ class ExceptionOne {
 		}
 		return employee.getAge();
 	}
+	
+	public void setVarargs(String...strings) {
+		String[] str = strings;
+		for (String string : strings) {
+			System.out.println(string);
+
+		}
+	}
 }
 public class ExceptionBasic {
 	
@@ -56,6 +64,8 @@ public class ExceptionBasic {
 		} catch (AgeException e) {
 			System.out.println(e.message);
 		}
+		
+		exceptionOne.setVarargs("1", "2", "3", "4", "5", "6");
 	}
 
 }
